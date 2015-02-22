@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class for accessing and manipulating settings array in SpeakUp! Email Petitions plugin for WordPress
+ * Class for accessing and manipulating settings array in SpeakOut! Email Petitions plugin for WordPress
  */
-class dk_speakup_Settings
+class dk_speakout_Settings
 {
 	public $petitions_rows;
 	public $signatures_rows;
@@ -24,6 +24,7 @@ class dk_speakup_Settings
 	public $signaturelist_header;
 	public $signaturelist_rows;
 	public $signaturelist_columns;
+	public $signaturelist_privacy;
 	public $sig_city = 0;
 	public $sig_state = 0;
 	public $sig_postcode = 0;
@@ -36,7 +37,7 @@ class dk_speakup_Settings
 	 */
 	public function retrieve()
 	{
-		$options  = get_option( 'dk_speakup_options' );
+		$options  = get_option( 'dk_speakout_options' );
 
 		$this->petitions_rows         = $options['petitions_rows'];
 		$this->signatures_rows        = $options['signatures_rows'];
@@ -56,6 +57,7 @@ class dk_speakup_Settings
 		$this->signaturelist_theme    = $options['signaturelist_theme'];
 		$this->signaturelist_header   = $options['signaturelist_header'];
 		$this->signaturelist_rows     = $options['signaturelist_rows'];
+		$this->signaturelist_privacy  = $options['signaturelist_privacy'];
 		$this->signaturelist_columns  = $options['signaturelist_columns'];
 
 		$this->_read_signaturelist_columns();
@@ -87,10 +89,11 @@ class dk_speakup_Settings
 			'signaturelist_theme'    => $this->signaturelist_theme,
 			'signaturelist_header'   => $this->signaturelist_header,
 			'signaturelist_rows'     => $this->signaturelist_rows,
-			'signaturelist_columns'  => $this->signaturelist_columns
+			'signaturelist_columns'  => $this->signaturelist_columns,
+			'signaturelist_privacy'  => $this->signaturelist_privacy
 		);
 
-		update_option( 'dk_speakup_options', $options );
+		update_option( 'dk_speakout_options', $options );
 	}
 
 	/**
@@ -99,7 +102,7 @@ class dk_speakup_Settings
 	private function _allowed_html_tags()
 	{
 		$allowed_tags = array(
-			'a'      => array( 'href' => array(),'title' => array(),'target' => array() ),
+			'a'      => array( 'href' => array(),'title' => array() ),
 			'em'     => array(),
 			'strong' => array(),
 			'p'      => array()
@@ -135,6 +138,7 @@ class dk_speakup_Settings
 		$this->signaturelist_header   = esc_html( stripslashes( $_POST['signaturelist_header'] ) );
 		$this->signaturelist_rows     = absint( $_POST['signaturelist_rows'] );
 		$this->signaturelist_columns  = $signaturelist_columns;
+		$this->signaturelist_privacy    = $_POST['signaturelist_privacy'];
 	}
 
 	/**

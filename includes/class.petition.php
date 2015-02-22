@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class for accessing and manipulating petition data in SpeakUp! Email Petitions plugin for WordPress
+ * Class for accessing and manipulating petition data in SpeakOut! Email Petitions plugin for WordPress
  */
-class dk_speakup_Petition
+class dk_speakout_Petition
 {
 
 	public $id;
@@ -182,7 +182,7 @@ class dk_speakup_Petition
 			$this->title = $_POST['title'];
 		}
 		else {
-			$this->title = __( 'No Title', 'dk_speakup' );
+			$this->title = __( 'No Title', 'dk_speakout' );
 		}
 
 		// Petition Box

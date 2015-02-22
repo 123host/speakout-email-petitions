@@ -1,16 +1,16 @@
-SpeakUp! Email Petitions
+SpeakOut! Email Petitions
 =======================
 
 A petition plugin for WordPress
 ___
 
-SpeakUp! Email Petitions allows you to easily create petition forms on your WordPress site.
+SpeakOut! Email Petitions allows you to easily create petition forms on your WordPress site.
 
 Compose a petition message and place the form on any page or post using a shortcode or widget. When the petition form is submitted, a copy of your message will be sent to the email address you selected. Included in the email will be the name and contact information provided by the form submitter. After signing the petition, visitors will have the option of sharing your petition page with their followers on Facebook or Twitter.
 
 Signatures are stored in the WordPress database and can be easily exported to CSV format for further analysis. You may set a goal for the number of signatures you hope to collect and then watch as a progress bar tracks your petition's advance toward its goal. Petitions may also be configured to stop accepting new signatures on a specified date.
 
-Stable releases of this plugin can also be found in the [WordPress Plugin Repository] (http://wordpress.org/extend/plugins/speakup-email-petitions/).
+Stable releases of this plugin can also be found in the [WordPress Plugin Repository] (http://wordpress.org/extend/plugins/speakout-email-petitions/).
 
 
 Shortcodes

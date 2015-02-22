@@ -1,19 +1,19 @@
 /* custom plugin icon for h2 headers */
-#dk-speakup #icon-dk-speakup { background: transparent url(../images/icon-emailpetitions-32.png) no-repeat top left; }
+#dk-speakout #icon-dk-speakout { background: transparent url(../images/icon-emailpetitions-32.png) no-repeat top left; }
 
 
 /* Settings tabs
 ------------------------------------------------------------------- */
-ul#dk-speakup-tabbar {
+ul#dk-speakout-tabbar {
 	border-bottom: 1px solid #aaa;
 	margin: 2em 0;
 	padding-left: 1em;
 }
-ul#dk-speakup-tabbar li {
+ul#dk-speakout-tabbar li {
 	display: inline-block;
 	margin: 0 0 -1px 0;
 }
-ul#dk-speakup-tabbar li a {
+ul#dk-speakout-tabbar li a {
 	display: inline-block;
 	background: #dcdcdc url(../images/bg-tabs-off.png) repeat-x top left;
 	border-top-right-radius: 6px;
@@ -31,8 +31,8 @@ ul#dk-speakup-tabbar li a {
 	color: #666;
 	cursor: pointer;
 }
-ul#dk-speakup-tabbar li a:hover { color: #21759b; }
-ul#dk-speakup-tabbar li a.dk-speakup-active {
+ul#dk-speakout-tabbar li a:hover { color: #21759b; }
+ul#dk-speakout-tabbar li a.dk-speakout-active {
 	background: #fff;
 	border-top: 1px solid #aaa;
 	border-left: 1px solid #aaa;
@@ -45,106 +45,106 @@ ul#dk-speakup-tabbar li a.dk-speakup-active {
 
 /* Form styles for Add New page
 ------------------------------------------------------------------- */
-#dk-speakup label {
+#dk-speakout label {
 	display: block;
 	font-weight: bold;
 }
-#dk-speakup label#title-prompt-text { font-weight: normal; }
-#dk-speakup #post-body .postbox label { margin: .5em 6px .25em 3px; }
-#dk-speakup form#dk-speakup-edit-petition textarea { width: 99%; }
-#dk-speakup form#dk-speakup-settings textarea { width: 85%; }
-#dk-speakup .dk-speakup-inline { display: inline; }
-#dk-speakup input[type=text] { margin: 0 0 .5em 0; }
-#dk-speakup .dk-speakup-hidden { display: none; }
-#dk-speakup .dk-speakup-right { text-align: right; }
-#dk-speakup .dk-speakup-subsection { margin-top: .5em; padding-bottom: 5px; }
-#dk-speakup .dk-speakup-subsection label {
+#dk-speakout label#title-prompt-text { font-weight: normal; }
+#dk-speakout #post-body .postbox label { margin: .5em 6px .25em 3px; }
+#dk-speakout form#dk-speakout-edit-petition textarea { width: 99%; }
+#dk-speakout form#dk-speakout-settings textarea { width: 85%; }
+#dk-speakout .dk-speakout-inline { display: inline; }
+#dk-speakout input[type=text] { margin: 0 0 .5em 0; }
+#dk-speakout .dk-speakout-hidden { display: none; }
+#dk-speakout .dk-speakout-right { text-align: right; }
+#dk-speakout .dk-speakout-subsection { margin-top: .5em; padding-bottom: 5px; }
+#dk-speakout .dk-speakout-subsection label {
 	font-weight: normal;
 	display: inline;
 }
-#dk-speakup .form-table label { font-weight: normal; }
-#dk-speakup .sends_email {
+#dk-speakout .form-table label { font-weight: normal; }
+#dk-speakout .sends_email {
 	background-color: #f9f9f9;
 	margin: -6px -6px 0 -6px;
 	padding: 7px 0 7px 7px;
 	border-bottom: 1px solid #eee;
 }
 body.admin-color-classic .sends_email { background-color: transparent !important; }
-.dk-speakup-petition-content { padding-top: 5px; }
-#dk-speakup #twitter-counter {
+.dk-speakout-petition-content { padding-top: 5px; }
+#dk-speakout #twitter-counter {
 	font-size: 1.1em;
 	text-align: right;
 	padding: 3px 7px 0 0;
 }
-.dk-speakup-address input { margin-left: 1.5em !important; }
-.dk-speakup-checkbox label { vertical-align: text-top; }
+.dk-speakout-address input { margin-left: 1.5em !important; }
+.dk-speakout-checkbox label { vertical-align: text-top; }
 
 /* error messages for Add / Edit form */
-.dk-speakup-error-msg { display: none; }
-.dk-speakup-error {
+.dk-speakout-error-msg { display: none; }
+.dk-speakout-error {
 	border: 1px solid #c00 !important;
 	background-color: #ffebe8 !important;
 }
-#dk-speakup #target_email, #dk-speakup #email_subject, #dk-speakup #greeting { width: 60%; }
+#dk-speakout #target_email, #dk-speakout #email_subject, #dk-speakout #greeting { width: 60%; }
 
 /* alterations to some default WP styles */
-#dk-speakup .postbox h3 { cursor: auto; }
-#dk-speakup .misc-pub-section { font-size: 11px; }
-#dk-speakup #major-publishing-actions { border-top: 1px solid #ddd; }
+#dk-speakout .postbox h3 { cursor: auto; }
+#dk-speakout .misc-pub-section { font-size: 11px; }
+#dk-speakout #major-publishing-actions { border-top: 1px solid #ddd; }
 
-#dk-speakup input#goal { text-align: right; }
+#dk-speakout input#goal { text-align: right; }
 
-#dk-speakup .table-label {
+#dk-speakout .table-label {
 	color: #000;
 	font-weight: bold;
 }
-#dk-speakup .table-label span.count {
+#dk-speakout .table-label span.count {
 	color: #999;
 	font-weight: normal;
 }
 
-#dk-speakup #side-sortables .inside { padding: 0; margin: 5px 0 0 0;}
+#dk-speakout #side-sortables .inside { padding: 0; margin: 5px 0 0 0;}
 
 /* progress bar styles */
-.dk-speakup-progress {
+.dk-speakout-progress {
 	border-radius: 2px;
 	background: #e5e5e5 url(../images/bg-progressbar-back-admin.png) repeat-x top left;
 	height: 10px;
 	border: 1px solid #aaa;
 	float: right;
 }
-.dk-speakup-progressbar {
+.dk-speakout-progressbar {
 	height: 10px;
 	border-right: 1px solid #aaa;
 }
-.dk-speakup-progressbar-low,
-.dk-speakup-progressbar-medium,
-.dk-speakup-progressbar-high,
-.dk-speakup-progressbar-complete {
+.dk-speakout-progressbar-low,
+.dk-speakout-progressbar-medium,
+.dk-speakout-progressbar-high,
+.dk-speakout-progressbar-complete {
 	background      : transparent url(../images/bg-progressbar.png) repeat-x top left;
 	background-size : 10px 10px;
 }
-.dk-speakup-progressbar-low {
+.dk-speakout-progressbar-low {
 	background-color : #3c0;
 }
-.dk-speakup-progressbar-medium {
+.dk-speakout-progressbar-medium {
 	background-color : #09f;
 }
-.dk-speakup-progressbar-high {
+.dk-speakout-progressbar-high {
 	background-color : #9f07ed;
 }
-.dk-speakup-progressbar-complete {
+.dk-speakout-progressbar-complete {
 	background-color           : #f00;
 	border-bottom-right-radius : ( @radius - 2px );
 	border-top-right-radius    : ( @radius - 2px );
 }
 
-.dk_speakup_clear { clear: both; }
-.dk-speakup-inline { display: inline; }
-.dk-speakup-red { color: #900; }
-.dk-speakup-green { color: #090; }
+.dk_speakout_clear { clear: both; }
+.dk-speakout-inline { display: inline; }
+.dk-speakout-red { color: #900; }
+.dk-speakout-green { color: #090; }
 
-form#dk-speakup-settings h3 { margin: 2em 0 0 0; }
-.dk-speakup-tablerow:hover { background-color: #ffd; }
-.dk-speakup-tablerow-even { background: #fff; }
-body.admin-color-classic .dk-speakup-tablerow-even { background: #f7fcfe; }
+form#dk-speakout-settings h3 { margin: 2em 0 0 0; }
+.dk-speakout-tablerow:hover { background-color: #ffd; }
+.dk-speakout-tablerow-even { background: #fff; }
+body.admin-color-classic .dk-speakout-tablerow-even { background: #f7fcfe; }

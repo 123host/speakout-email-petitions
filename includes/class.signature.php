@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class for accessing and manipulating signature data in SpeakUp! Email Petitions plugin for WordPress
+ * Class for accessing and manipulating signature data in SpeakOut! Email Petitions plugin for WordPress
  */
-class dk_speakup_Signature
+class dk_speakout_Signature
 {
 	public $id;
 	public $petitions_id;
@@ -52,7 +52,7 @@ class dk_speakup_Signature
 		$sql_context_filter = '';
 		// restrict results to either single or double opt-in signatures
 		if ( $context == 'csv' ) {
-			$options = get_option( 'dk_speakup_options' );
+			$options = get_option( 'dk_speakout_options' );
 
 			if ( $options['csv_signatures'] == 'single_optin' ) {
 				$sql_context_filter = "AND $db_signatures.optin = '1'";

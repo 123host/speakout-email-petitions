@@ -1,4 +1,4 @@
-table.dk-speakup-signaturelist {
+table.dk-speakout-signaturelist {
 	border-collapse: collapse;
 	border-top: 2px solid #999;
 	clear: both;
@@ -7,45 +7,45 @@ table.dk-speakup-signaturelist {
 	margin-bottom: 1em;
 	width: 100%;
 }
-.dk-speakup-signaturelist caption {
+.dk-speakout-signaturelist caption {
 	font-weight: bold;
 	line-height: 2em;
 	text-align: left;
 }
-table.dk-speakup-signaturelist {
+table.dk-speakout-signaturelist {
 	border-bottom: none;
 }
-table.dk-speakup-signaturelist td {
+table.dk-speakout-signaturelist td {
 	border-bottom: 1px solid #ccc;
 	padding: 3px 10px;
 	vertical-align: top;
 }
-td.dk-speakup-signaturelist-name,
-td.dk-speakup-signaturelist-city,
-td.dk-speakup-signaturelist-state,
-td.dk-speakup-signaturelist-country {
+td.dk-speakout-signaturelist-name,
+td.dk-speakout-signaturelist-city,
+td.dk-speakout-signaturelist-state,
+td.dk-speakout-signaturelist-country {
 	text-transform: capitalize;
 }
-td.dk-speakup-signaturelist-count {
+td.dk-speakout-signaturelist-count {
 	text-align: right;
 }
-td.dk-speakup-signaturelist-name {
+td.dk-speakout-signaturelist-name {
 	font-weight: bold;
 }
-tr.dk-speakup-even {
+tr.dk-speakout-even {
 	background: #eee;
 }
-tr.dk-speakup-odd {
+tr.dk-speakout-odd {
 	background: transparent;
 }
 
-table.dk-speakup-signaturelist tr.dk-speakup-signaturelist-pagelinks td {
+table.dk-speakout-signaturelist tr.dk-speakout-signaturelist-pagelinks td {
 	border-bottom: none;
 	padding: 8px 0 0 0;
 	text-align: right;
 }
-a.dk-speakup-signaturelist-prev,
-a.dk-speakup-signaturelist-next {
+a.dk-speakout-signaturelist-prev,
+a.dk-speakout-signaturelist-next {
 	background: #dedede url(../images/bg-pagination-button.png) repeat-x top left;
 	border-radius: 4px;
 	border: 1px solid #ccc;
@@ -62,20 +62,20 @@ a.dk-speakup-signaturelist-next {
 	text-decoration: none;
 	text-shadow: 0 1px 0 rgba( 255, 255, 255, 0.7 );
 }
-a.dk-speakup-signaturelist-prev:hover,
-a.dk-speakup-signaturelist-next:hover {
+a.dk-speakout-signaturelist-prev:hover,
+a.dk-speakout-signaturelist-next:hover {
 	color: #444;
 }
-a.dk-speakup-signaturelist-prev:active,
-a.dk-speakup-signaturelist-next:active {
+a.dk-speakout-signaturelist-prev:active,
+a.dk-speakout-signaturelist-next:active {
 	box-shadow: none;
 	position: relative;
 	top: 1px;
 }
-a.dk-speakup-signaturelist-prev:hover {
+a.dk-speakout-signaturelist-prev:hover {
 	text-decoration: none;
 }
-.dk-speakup-signaturelist-disabled {
+.dk-speakout-signaturelist-disabled {
 	cursor: default !important;
 	opacity: 0.3;
 }

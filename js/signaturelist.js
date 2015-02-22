@@ -2,13 +2,13 @@ jQuery( document ).ready( function( $ ) {
 	'use strict';
 
 	// next pagination button is clicked
-	$( '.dk-speakup-signaturelist-next' ).click( function( e ) {
+	$( '.dk-speakout-signaturelist-next' ).click( function( e ) {
 		e.preventDefault();
 		get_signaturelist( $( this ) );
 	});
 
 	// prev pagination button is clicked
-	$( '.dk-speakup-signaturelist-prev' ).click( function( e ) {
+	$( '.dk-speakout-signaturelist-prev' ).click( function( e ) {
 		e.preventDefault();
 		get_signaturelist( $( this ) );
 	});
@@ -16,7 +16,7 @@ jQuery( document ).ready( function( $ ) {
 	// pagination: query new signatures and display results
 	function get_signaturelist( button, link ) {
 		// change button appearance to disabled while ajax request is processing
-		$( this ).addClass( 'dk-speakup-signaturelist-disabled' );
+		$( this ).addClass( 'dk-speakout-signaturelist-disabled' );
 		
 		var link   = button.attr( 'rel' ).split( ',' ),
 			id     = link[0],
@@ -25,26 +25,26 @@ jQuery( document ).ready( function( $ ) {
 			total  = link[3],
 			status = link[4],
 			ajax   = {
-				action: 'dk_speakup_paginate_signaturelist',
+				action: 'dk_speakout_paginate_signaturelist',
 				id:         id,
 				start:      start,
 				limit:      limit,
-				dateformat: dk_speakup_signaturelist_js.dateformat
+				dateformat: dk_speakout_signaturelist_js.dateformat
 			};
 
 		if ( status === '1' ) {
 			// submit data and handle ajax response
-			$.post( dk_speakup_signaturelist_js.ajaxurl, ajax,
+			$.post( dk_speakout_signaturelist_js.ajaxurl, ajax,
 				function( response ) {
 					var next_link = get_next_link( id, start, limit, total );
 					var prev_link = get_prev_link( id, start, limit, total );
 
 					toggle_button_display( id, next_link, prev_link );
 
-					$( '.dk-speakup-signaturelist-' + id + ' tr:not(:last-child)' ).remove();
-					$( '.dk-speakup-signaturelist-' + id ).prepend( response );
-					$( '.dk-speakup-signaturelist-' + id + ' .dk-speakup-signaturelist-next' ).attr( 'rel', next_link );
-					$( '.dk-speakup-signaturelist-' + id + ' .dk-speakup-signaturelist-prev' ).attr( 'rel', prev_link );
+					$( '.dk-speakout-signaturelist-' + id + ' tr:not(:last-child)' ).remove();
+					$( '.dk-speakout-signaturelist-' + id ).prepend( response );
+					$( '.dk-speakout-signaturelist-' + id + ' .dk-speakout-signaturelist-next' ).attr( 'rel', next_link );
+					$( '.dk-speakout-signaturelist-' + id + ' .dk-speakout-signaturelist-prev' ).attr( 'rel', prev_link );
 				}
 			);
 		}
@@ -96,17 +96,17 @@ jQuery( document ).ready( function( $ ) {
 
 	function toggle_button_display( id, next_link, prev_link ) {
 		if ( next_link.split( ',' )[4] === '0' ) {
-			$( '.dk-speakup-signaturelist-' + id + ' .dk-speakup-signaturelist-next' ).addClass( 'dk-speakup-signaturelist-disabled' );
+			$( '.dk-speakout-signaturelist-' + id + ' .dk-speakout-signaturelist-next' ).addClass( 'dk-speakout-signaturelist-disabled' );
 		}
 		else {
-			$( '.dk-speakup-signaturelist-' + id + ' .dk-speakup-signaturelist-next' ).removeClass( 'dk-speakup-signaturelist-disabled' );
+			$( '.dk-speakout-signaturelist-' + id + ' .dk-speakout-signaturelist-next' ).removeClass( 'dk-speakout-signaturelist-disabled' );
 		}
 
 		if ( prev_link.split( ',' )[4] === '0' ) {
-			$( '.dk-speakup-signaturelist-' + id + ' .dk-speakup-signaturelist-prev' ).addClass( 'dk-speakup-signaturelist-disabled' );
+			$( '.dk-speakout-signaturelist-' + id + ' .dk-speakout-signaturelist-prev' ).addClass( 'dk-speakout-signaturelist-disabled' );
 		}
 		else {
-			$( '.dk-speakup-signaturelist-' + id + ' .dk-speakup-signaturelist-prev' ).removeClass( 'dk-speakup-signaturelist-disabled' );
+			$( '.dk-speakout-signaturelist-' + id + ' .dk-speakout-signaturelist-prev' ).removeClass( 'dk-speakout-signaturelist-disabled' );
 		}
 	}
 

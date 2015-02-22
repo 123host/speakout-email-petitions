@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class for sending emails in SpeakUp! Email Petitions plugin for WordPress
+ * Class for sending emails in SpeakOut! Email Petitions plugin for WordPress
  */
-class dk_speakup_Mail
+class dk_speakout_Mail
 {
 
 	/**
@@ -22,7 +22,7 @@ class dk_speakup_Mail
 
 		// construct confirmation URL
 		$lang = isset( $_POST['lang'] ) ? $_POST['lang'] : ''; // WPML
-		$confirmation_url = home_url() . '?dkspeakupconfirm=' . $signature->confirmation_code . '&lang=' . $lang;
+		$confirmation_url = home_url() . '?dkspeakoutconfirm=' . $signature->confirmation_code . '&lang=' . $lang;
 
 		// add confirmation link to email if user left it out
 		if ( strpos( $message, '%confirmation_link%' ) == false ) {

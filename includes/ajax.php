@@ -3,9 +3,9 @@
 /**
  * Handle public petition form submissions
  */
-add_action( 'wp_ajax_dk_speakup_sendmail', 'dk_speakup_sendmail' );
-add_action( 'wp_ajax_nopriv_dk_speakup_sendmail', 'dk_speakup_sendmail' );
-function dk_speakup_sendmail() {
+add_action( 'wp_ajax_dk_speakout_sendmail', 'dk_speakout_sendmail' );
+add_action( 'wp_ajax_nopriv_dk_speakout_sendmail', 'dk_speakout_sendmail' );
+function dk_speakout_sendmail() {
 
 	// set WPML language
 	global $sitepress;
@@ -18,10 +18,10 @@ function dk_speakup_sendmail() {
 	include_once( 'class.petition.php' );
 	include_once( 'class.mail.php' );
 	include_once( 'class.wpml.php' );
-	$the_signature = new dk_speakup_Signature();
-	$the_petition  = new dk_speakup_Petition();
-	$wpml          = new dk_speakup_WPML();
-	$options       = get_option( 'dk_speakup_options' );
+	$the_signature = new dk_speakout_Signature();
+	$the_petition  = new dk_speakout_Petition();
+	$wpml          = new dk_speakout_WPML();
+	$options       = get_option( 'dk_speakout_options' );
 
 	// clean posted signature fields
 	$the_signature->poppulate_from_post();
@@ -44,11 +44,11 @@ function dk_speakup_sendmail() {
 		if ( $the_petition->requires_confirmation ) {
 			$the_signature->is_confirmed = 0;
 			$the_signature->create_confirmation_code();
-			dk_speakup_Mail::send_confirmation( $the_petition, $the_signature, $options );
+			dk_speakout_Mail::send_confirmation( $the_petition, $the_signature, $options );
 		}
 		else {
 			if ( $the_petition->sends_email ) {
-				dk_speakup_Mail::send_petition( $the_petition, $the_signature );
+				dk_speakout_Mail::send_petition( $the_petition, $the_signature );
 			}
 		}
 
@@ -59,8 +59,6 @@ function dk_speakup_sendmail() {
 		$success_message = $options['success_message'];
 		$success_message = str_replace( '%first_name%', $the_signature->first_name, $success_message );
 		$success_message = str_replace( '%last_name%', $the_signature->last_name, $success_message );
-
-		do_action( 'dk_speakup_petition_signed', $the_signature );
 
 		$json_response = array(
 			'status'  => 'success',
@@ -85,11 +83,11 @@ function dk_speakup_sendmail() {
 	die();
 }
 
-add_action( 'wp_ajax_dk_speakup_paginate_signaturelist', 'dk_speakup_paginate_signaturelist' );
-add_action( 'wp_ajax_nopriv_dk_speakup_paginate_signaturelist', 'dk_speakup_paginate_signaturelist' );
-function dk_speakup_paginate_signaturelist() {
+add_action( 'wp_ajax_dk_speakout_paginate_signaturelist', 'dk_speakout_paginate_signaturelist' );
+add_action( 'wp_ajax_nopriv_dk_speakout_paginate_signaturelist', 'dk_speakout_paginate_signaturelist' );
+function dk_speakout_paginate_signaturelist() {
 	include_once( 'class.signaturelist.php' );
-	$list = new dk_speakup_Signaturelist();
+	$list = new dk_speakout_Signaturelist();
 	$table = $list->table( $_POST['id'], $_POST['start'], $_POST['limit'], 'ajax', $_POST['dateformat'] );
 	echo $table;
 	// end AJAX processing
